@@ -7,7 +7,6 @@ local servers = {
   rust_analyzer = {},
   clangd = {},
   pylsp = {},
-  emmet_language_server = {}
 }
 
 for name, opts in pairs(servers) do
