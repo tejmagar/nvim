@@ -1,12 +1,5 @@
 local configs = require "nvchad.configs.lspconfig"
 
-vim.cmd [[
-  augroup LspOnSave
-    autocmd!
-    autocmd BufWritePost * lua vim.diagnostic.setloclist({ open = false })
-  augroup END
-]]
-
 local servers = {
   html = {},
   awk_ls = {},
