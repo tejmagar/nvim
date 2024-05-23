@@ -22,7 +22,7 @@ return {
   		ensure_installed = {
   			"lua-language-server", "stylua",
   			"html-lsp", "css-lsp" , "prettier",
-        "rust-analyzer", "clangd", "emmet_language_server", "clang-format"
+        "rust-analyzer", "clangd", "clang-format"
   		},
   	},
   },
