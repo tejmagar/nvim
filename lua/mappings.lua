@@ -55,7 +55,21 @@ map('v', '<C-s>', '<Esc>:w<CR>', opts)
 
 -- Duplicate line with Ctrl + d
 map('n', '<C-d>', ':t.<CR>', opts)
-map('i', '<C-d>', ':t.<CR>', opts)
+
+local function duplicate_line()
+  local mode = vim.api.nvim_get_mode().mode
+  if mode == 'i' then
+    -- If in insert mode, switch to normal mode, duplicate line, and return to insert mode
+    return vim.api.nvim_replace_termcodes("<Esc>:t.<CR>i", true, true, true)
+  else
+    -- If in normal mode, just duplicate the line
+    return vim.api.nvim_replace_termcodes(":t.<CR>", true, true, true)
+  end
+end
+
+map('i', '<C-d>', function()
+  vim.api.nvim_feedkeys(duplicate_line(), 'n', true)
+end, opts)
 
 -- Refactoring with Ctrl + r
 map('n', '<C-r>', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
