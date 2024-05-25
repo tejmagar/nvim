@@ -80,4 +80,8 @@ map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap=true, silent=true })
 map('n', '<C-k>', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap=true, silent=true })
 map('i', '<C-k>', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap=true, silent=true })
 
+-- Tab select left
+map('v', '<Tab>', '>gv', { noremap=true, silent=true })
+map('v', '<S-Tab>', '<gv', { noremap=true, silent=true })
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
