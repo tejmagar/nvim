@@ -28,6 +28,9 @@ end, { desc = "Format code" })
 
 local opts = { noremap = true, silent = true }
 
+-- Map ctrl + c to copy 
+map('v', '<C-c>', '"+y', opts);
+
 -- Map Ctrl + x to cut (delete)
 map('v', '<C-x>', '"+d', opts)
 map('n', '<C-x>', 'v"+d', opts)
