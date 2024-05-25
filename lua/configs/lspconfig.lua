@@ -4,7 +4,11 @@ local servers = {
   html = {},
   awk_ls = {},
   bashls = {},
-  rust_analyzer = {},
+  rust_analyzer = {
+    cargo = {
+      rustcSource = "/usr/lib/rustlib/src/rust/src",
+    }
+  },
   clangd = {},
   pylsp = {},
 }
