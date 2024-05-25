@@ -75,4 +75,9 @@ end, opts)
 map('n', '<C-r>', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 map('i', '<C-r>', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 
+-- Popup function hover
+map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap=true, silent=true })
+map('n', '<C-k>', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap=true, silent=true })
+map('i', '<C-k>', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap=true, silent=true })
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
