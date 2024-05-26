@@ -26,6 +26,10 @@ map("v", "<A-S-l>", function()
   vim.lsp.buf.format({ async = true })
 end, { desc = "Format code" })
 
+map("n", "<A-S-l>", function()
+  vim.lsp.buf.format({ async = true })
+end, { desc = "Format code" })
+
 local opts = { noremap = true, silent = true }
 
 -- Map ctrl + c to copy 
