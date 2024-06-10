@@ -50,9 +50,9 @@ map('i', '<C-z>', '<C-o>u', opts)
 map('v', '<C-z>', '<Esc>u', opts)
 --
 -- Map Ctrl + y to redo
-map('n', '<C-y>', '<C-r>', opts)
-map('i', '<C-y>', '<C-o><C-r>', opts)
-map('v', '<C-y>', '.<Esc><C-r>', opts)
+map('n', '<C-S-z>', '<C-r>', opts)
+map('i', '<C-S-z>', '<C-o><C-r>', opts)
+map('v', '<C-S-z>', '.<Esc><C-r>', opts)
 
 -- Map Ctrl + s to save
 map('n', '<C-s>', ':w<CR>', opts)
