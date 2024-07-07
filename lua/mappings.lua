@@ -32,6 +32,10 @@ end, { desc = "Format code" })
 
 local opts = { noremap = true, silent = true }
 
+-- Map ctrl + A to select all
+map('n', '<C-a>', 'ggVG', opts)
+map('v', '<C-a>', 'ggVG', opts)
+
 -- Map ctrl + c to copy 
 map('v', '<C-c>', '"+y', opts);
 
